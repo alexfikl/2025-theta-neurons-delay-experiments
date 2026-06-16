@@ -76,7 +76,7 @@ ty:
 
 [private]
 requirements_txt:
-    uv pip compile --upgrade --universal --python-version '3.10' \
+    uv pip compile --upgrade --universal --python-version '3.11' \
         -o requirements.txt pyproject.toml
 
 [doc('Pin dependency versions to requirements.txt')]
