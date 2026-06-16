@@ -36,7 +36,7 @@ numpy==2.4.6
     #   matplotlib
     #   orbitkit
     #   scipy
-orbitkit @ git+https://github.com/alexfikl/orbitkit.git@25df153d9a96e92e67dfde31e2523b92e8ba35e8#egg=orbitkit
+orbitkit @ git+https://github.com/alexfikl/orbitkit.git@378524fea799b1d44cef9999399c622f4d2513dd#egg=orbitkit
     # via theta-neurons (pyproject.toml)
 packaging==26.2
     # via matplotlib

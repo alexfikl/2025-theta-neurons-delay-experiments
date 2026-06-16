@@ -103,4 +103,52 @@ crop:
 # }}}
 # {{{ figures
 
+[doc("Generate plot for Figure 1")]
+figure1:
+    {{ PYTHON }} experiments/type1-equilibria-and-tau-plots.py
+
+[doc("Generate plot for Figure 2")]
+figure2:
+    {{ PYTHON }} experiments/type1-dirac-tau-and-l1-with-hopf-boundary.py
+
+[doc("Generate plot for Figure 3, 4, 5")]
+figure345:
+    {{ PYTHON }} experiments/type2-center-regions-and-tau1-l1.py
+
+[doc("Generate plot for Figure 6")]
+figure6:
+    {{ PYTHON }} experiments/attractor-classification.py
+
+[doc("Generate plot for Figure 7")]
+figure7:
+    {{ PYTHON }} experiments/theta-neurons.py \
+        --select set1 --npoints 4096 \
+        --regions --trajectories \
+        experiments/parameters-paper.toml
+
+[doc("Generate plot for Figure 8")]
+figure8:
+    {{ PYTHON }} experiments/theta-neurons.py \
+        --select set2 --npoints 4096 \
+        --phase \
+        experiments/parameters-paper.toml
+
+[doc("Generate plot for Figure 9")]
+figure9:
+    {{ PYTHON }} experiments/theta-neurons.py \
+        --select set31 --npoints 4096 \
+        --regions --trajectories \
+        experiments/parameters-paper.toml
+    {{ PYTHON }} experiments/theta-neurons.py \
+        --select set32 --npoints 4096 \
+        --regions --trajectories \
+        experiments/parameters-paper.toml
+
+[doc("Generate plot for Figure 10")]
+figure10:
+    {{ PYTHON }} experiments/theta-neurons.py \
+        --select set4 --npoints 4096 \
+        --regions --trajectories \
+        experiments/parameters-paper.toml
+
 # }}}
