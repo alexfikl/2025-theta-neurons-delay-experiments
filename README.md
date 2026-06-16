@@ -1,6 +1,7 @@
 # Stability of equilibria in an infinite dimensional network of theta neurons with time delay
 
 [![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://spdx.org/licenses/MIT.html)
+[![Zenodo repository](https://zenodo.org/badge/DOI/10.5281/zenodo.20718310.svg)](https://doi.org/10.5281/zenodo.20718310)
 
 This code accompanies the paper. It contains all the scripts used to generate
 the figures and results in the paper.
