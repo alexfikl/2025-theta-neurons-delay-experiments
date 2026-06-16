@@ -33,23 +33,6 @@ justfmt:
     just --unstable --fmt
     @echo -e "\e[1;32mjust --fmt clean!\e[0m"
 
-[doc("Clean up the bibliography (with bibtex-tidy)")]
-tidy:
-    @bibtex-tidy \
-        --modify \
-        --sort \
-        --sort-fields \
-        --drop-all-caps \
-        --merge last \
-        --numeric \
-        --strip-enclosing-braces \
-        --trailing-commas \
-        --blank-lines \
-        --remove-empty-fields \
-        --remove-dupe-fields \
-        --wrap \
-        ../bibliography.bib
-
 # }}}
 # {{{ linting
 
