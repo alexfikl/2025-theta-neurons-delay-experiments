@@ -49,7 +49,9 @@ pyparsing==3.3.2
 python-dateutil==2.9.0.post0
     # via matplotlib
 rich==15.0.0
-    # via orbitkit
+    # via
+    #   theta-neurons (pyproject.toml)
+    #   orbitkit
 scipy==1.17.1
     # via
     #   theta-neurons (pyproject.toml)
