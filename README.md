@@ -51,7 +51,8 @@ just figure8
 just figure9
 just figure10
 ```
-to get all the figures. The runs for Figure 7-10 are significantly slower than the
-rest, since they run actual simulations for thousands of initial conditions. They
-should generate the corresponding files in the `experiments/` directory (`npz`
-archives of the solutions and the plots themselves).
+to get all the figures. The runs for Figure 7-10 are significantly slower
+(10-15 min) than the rest, since they run actual simulations for thousands of
+initial conditions. They should generate the corresponding files in the
+`experiments/` directory (`npz` archives of the solutions and the plots
+themselves).
