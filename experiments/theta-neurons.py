@@ -209,7 +209,6 @@ def solve_ivp(
     z0: Array1D[np.complexfloating[Any]],
     *,
     tspan: tuple[float, float],
-    use_constant_z0: bool = True,
     dt: float = 0.01,
     atol: float = 1.0e-9,
     rtol: float = 1.0e-6,
@@ -235,20 +234,7 @@ def solve_ivp(
     code.reset()
     y0 = np.hstack([z0.real, z0.imag])
 
-    if use_constant_z0 or abs(tau) <= 1.0e-8:
-        code.set_initial_conditions(y0, tspan[0])
-    else:
-        # linear history:
-        #   z(s) = z1 + z0 * (s + tau) / tau,
-        # so z(-tau) = z1 and z(0) = z0.
-        def _history(t: float) -> list[float]:
-            z1 = -0.452
-            z = z1 + (t + tau) / tau * z0
-            return [float(z.real), float(z.imag)]
-
-        code.set_delays_from_parameters(eta=eta, kappa=kappa, tau=tau)
-        code.dde.past_from_function(_history)
-
+    code.set_initial_conditions(y0, tspan[0])
     code.set_parameters(eta=eta, kappa=kappa, tau=tau)
 
     # NOTE: using adjust_diff seems to give results a lot closer some literature.
